@@ -1,6 +1,6 @@
 A portfolio of machine learning projects demonstrating end-to-end workflows, from data preparation and feature engineering to model training, evaluation, and insights. 🤖
 
-### Project Name: RETAIL SALES FORECASTING AND PROFIT ANALYSIS SYSTEM. 
+### Project1 Name: RETAIL SALES FORECASTING AND PROFIT ANALYSIS SYSTEM. 
 
 ### 📌 Project Overview
 
@@ -45,7 +45,7 @@ A portfolio of machine learning projects demonstrating end-to-end workflows, fro
 ___________________________________________________________________________________________________________________________________________________________________________________________
 
 
-### Project Name: NBA PLAYER PERFORMANCE PREDICTION.  
+### Project2 Name: NBA PLAYER PERFORMANCE PREDICTION.  
 
 ### 📌 Project Overview
 
