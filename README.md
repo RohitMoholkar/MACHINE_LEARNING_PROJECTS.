@@ -1,19 +1,84 @@
 A portfolio of machine learning projects demonstrating end-to-end workflows, from data preparation and feature engineering to model training, evaluation, and insights. 🤖
 
-### About Machine Learning:
-Machine learning is a branch of artificial intelligence (AI) that focuses on developing algorithms and statistical models that enable computers to learn and improve from experience without being explicitly programmed. In essence, machine learning algorithms use data to detect patterns, make predictions, or make decisions, often with minimal human intervention. Machine learning algorithms can be categorized into several types, including supervised learning, unsupervised learning, semi-supervised learning, reinforcement learning, and deep learning. 
+### Project Name: RETAIL SALES FORECASTING AND PROFIT ANALYSIS SYSTEM. 
 
-### Project1 Description. 
-- Project Name: **RETAIL SALES FORECASTING AND PROFIT ANALYSIS SYSTEM.**
-- Abstract: The project aims to develop a predictive model for forecasting sales profitability in a retail company. Leveraging machine learning algorithms, the model integrates diverse factors including customer demographics, product categories, sales quantities, discounts, and shipping modes to predict profit margins accurately. By optimizing pricing strategies and identifying cost-saving opportunities, the model empowers retail companies to enhance revenue generation and streamline inventory management. Through exploratory data analysis, feature engineering, and rigorous model training, the project achieves robust predictive capabilities. Evaluation metrics validate model performance, ensuring reliability in profit prediction. The project underscores the pivotal role of predictive analytics in driving strategic decision-making and operational efficiency within the retail sector, contributing to sustainable growth and competitive advantage.
-- To access detailed information, kindly review the Project1 report PDF located above. 
+### 📌 Project Overview
 
-### Project2 Description. 
-- Project Name: **NBA PLAYER PERFORMANCE PREDICTION.**
-- This project endeavors to explore the realm of sports analytics by leveraging machine learning techniques to forecast the impact of NBA players based on their performance statistics. In the modern era of professional basketball, data-driven insights play a pivotal role in strategic decision-making for teams and individual players alike.
-- The dataset for this project was sourced from Kaggle.com and contains detailed statistics and performance metrics of NBA players during basketball games. After importing essential Python libraries for data analysis and visualization, initial steps involved understanding the dataset's structure, dimensions, and data types.
-- In the preprocessing phase, columns with over 60% null values were dropped, as they held little relevance for the machine learning model. Subsequently, rows containing any remaining null values were removed to maintain data integrity. The 'minutes' column, initially presented as an object, was converted to float for accurate analysis and model compatibility. Furthermore, the 'points' column underwent correction using the appropriate formula. A target variable, 'modified plus minus point,' was engineered for the model. The dataset size decreased from 645,953 rows and 29 columns to 516,595 rows and 27 columns after preprocessing, reflecting the removal of irrelevant and erroneous data, and the optimization of features for model training and analysis.
-- In the data analysis phase, various insights were extracted from the preprocessed dataset to understand player performance and its impact. The analysis encompassed exploratory data visualization, statistical summaries, and correlation assessments. Key aspects such as team-wise performance, player statistics, and point contributions were investigated to identify trends and patterns. Visualizations including bar plots, scatter plots, and heatmaps were utilized to highlight significant relationships and distributions within the data. This analysis aided in finalizing the features needed for the machine learning model.
-- Following data analysis, a function was developed to compute the career statistics of NBA players based on inputting their names. The function assesses various performance metrics throughout a player's career.
-- After finalizing the dataset for the machine learning model, which included columns such as MIN, FGM, FG3M, FTM, REB, AST, STL, BLK, TO, PF, PTS, and MODIFIED_PLUS_MINUS, I plotted the correlation matrix to understand the relationships between these features. Following this, I performed train-test split and applied logistic regression to the data. Analyzing the weights of each feature provided insight into their importance in predicting player impact. The logistic regression model achieved an accuracy of approximately 62% on both training and testing data. Further evaluation through classification reports and confusion matrices confirmed the model's performance. I saved the trained logistic regression model using pickle for future use and applied it to predict player performance. To ensure logistic regression was the optimal choice for the classification problem, I also applied the K-nearest neighbors (KNN) algorithm, which yielded an accuracy of around 56%. This comparison highlighted the superiority of logistic regression for our classification task.
-- The project aimed to leverage NBA player performance data to predict player impact through machine learning. By analyzing player statistics and applying classification models, we sought to uncover patterns and trends indicative of player contributions on the court. 
+- Analyzed 10,000 retail transactions to uncover revenue drivers across customer segments, cities, states, product categories, and shipping modes.
+- Cleaned and prepared the dataset with feature engineering (e.g., time to deliver, ship month), label encoding, and outlier handling.
+- Trained and tuned Linear Regression and XGBoost models, achieving ~65% R² accuracy.
+- Identified discount as the most influential factor impacting profit margins.
+- Visualized performance using residual plots, prediction error plots, learning curves, and feature importance charts.
+- Findings provides actionable intelligence for retailers to balance discounts, shipping choices, and customer segmentation. 
+
+### 📂 Repository Contents
+
+- Project1.ipynb → Full Jupyter notebook (EDA → preprocessing → modeling → evaluation).
+- Project1.pdf → Report summarizing methodology, analysis, and findings.
+
+### 📊 Results
+
+- Model Performance: Linear Regression → R² ≈ 0.62, consistent residual distribution.
+- XGBoost → R² ≈ 0.65, reduced error after tuning.
+- Key Insights: Discount emerged as the strongest predictor of profitability. Outliers in deposit/discount strongly affected model stability. Feature engineering improved model accuracy and interpretability.
+- Visual Outputs:
+
+- Residual Plot + Residual Distribution (Linear Regression). 
+<img width="700" height="500" alt="Residual_Plot Distribution" src="https://github.com/user-attachments/assets/bebabd2a-369b-417d-8e22-ab757a184632" />
+
+- RMSE Learning Curve (XGBoost).
+<img width="700" height="400" alt="XGBoost_RMSE" src="https://github.com/user-attachments/assets/82c44d6f-ea4e-442b-8e78-08e049216d12" />
+
+- Prediction Error Plot.
+<img width="700" height="400" alt="Prediction_Error_Plot" src="https://github.com/user-attachments/assets/affe033d-d9aa-446a-9181-7aac6e6ef515" />
+
+### 🔮 Future Scope
+
+- Extend to multi-algorithm comparison (Random Forest, Gradient Boosting).
+- Integrate external data (e.g., economic indicators, seasonal effects, market trends).
+- Deploy as a Streamlit dashboard for interactive business users.
+
+### 💻 Tech Stack 
+
+• Python  • Pandas  • NumPy  • Matplotlib  • Seaborn  • Scikit-learn (Linear Regression)  • XGBoost
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+
+### Project Name: NBA PLAYER PERFORMANCE PREDICTION.  
+
+### 📌 Project Overview
+
+- Analyzed 645k+ NBA player performance records from Kaggle to forecast player impact using machine learning.
+- Preprocessed the dataset: dropped high-null columns, handled missing values, corrected datatypes (e.g., minutes → float), and engineered a new target variable (Modified Plus-Minus Score).
+- Reduced dataset to ~516k rows × 27 columns after cleaning and feature optimization.
+- Conducted exploratory data analysis with bar plots, scatter plots, and heatmaps to uncover team-level performance patterns and player statistics.
+- Built a Logistic Regression model (62% accuracy) to classify player impact; compared with K-Nearest Neighbors (~56% accuracy).
+- Evaluated models using confusion matrix, classification report, and feature weights to highlight the most influential performance metrics.
+- Developed a career stats function, allowing input of a player’s name to compute aggregated performance across seasons.
+- Results help coaches, analysts, and teams make data-driven decisions on player contributions.
+
+### 📂 Repository Contents
+
+- Project2.ipynb → Jupyter notebook with full preprocessing, feature engineering, EDA, and modeling workflow. 
+
+### 📊 Results
+
+- Dataset reduced from 645k+ to ~516k rows after cleaning and feature optimization.
+- Logistic Regression achieved ~62% accuracy on training and test sets.
+- K-Nearest Neighbors (KNN) reached ~56% accuracy (confirming Logistic Regression as the stronger model).
+- Evaluation metrics:
+- Classification Report → precision, recall, F1-score across classes.
+<img width="412" height="174" alt="ClassificationReport" src="https://github.com/user-attachments/assets/61300ffd-9668-45fa-8e51-f162c14de6e8" />
+
+- Confusion Matrix → distribution of correct vs incorrect predictions.
+<img width="450" height="400" alt="ConfusionMatrix" src="https://github.com/user-attachments/assets/259d2d2b-ffa6-4d96-b205-bbbadb1a7d83" />
+
+### 🔮 Future Scope
+
+- Incorporate contextual variables like home/away games, opponent defense strength, or player fatigue for richer predictions. 
+- Experiment with ensemble methods (Random Forest, XGBoost) and deep learning models (RNNs for time-series game data).
+
+### 💻 Tech Stack 
+
+• Python  • Pandas • Matplotlib  • Seaborn  • Scikit-learn (Logistic Regression, KNN)  • Pickle
